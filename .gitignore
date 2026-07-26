@@ -1,0 +1,29 @@
+# Public open-source export policy. Used by export-public.sh as the public
+# repo's .gitignore. Sensitive / private files are excluded here and never
+# leave the private source repo.
+
+# Private / machine-local config (never publish)
+src/deck/config_local.py
+
+# Third-party binary, not ours to redistribute. Provided by the device's
+# firmware (StockOS mod). See PORTING.md.
+src/deck/SimpleTerminal
+
+# Personal setup helpers and working notes (contain a device IP / public key)
+authorize-laptop.sh
+rg35xx-h-deck-handoff-v2.md
+
+# Runtime files written on the device
+src/deck/selection
+src/deck/state
+src/deck/theme
+src/deck/log.txt
+src/deck/alarm.wav
+src/deck/tools_state/
+src/deck/weather.json
+src/deck/maps.json
+src/deck/tiles/
+
+# Python
+__pycache__/
+*.pyc
